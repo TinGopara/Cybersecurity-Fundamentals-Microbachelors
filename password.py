@@ -4,6 +4,7 @@ password = ""
 
 
 def salted_password(password,salt):
+    #password = input("Please enter your password: ")
     password = str(password)
     salt = salt.encode()
     hashed = hashlib.sha256(password.encode()+salt).hexdigest()
